@@ -39,6 +39,7 @@ export default function Home() {
       <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
         <h1 className="text-4xl font-bold">WhatsApp Messenger</h1>
         {!isReady && !qrCodeUrl && <p>Loading...</p>}
+        {/* eslint-disable-next-line @next/next/no-img-element */}
         {qrCodeUrl && <img src={qrCodeUrl} alt="QR Code" />}
         {isReady && (
           <form onSubmit={handleSubmit} className="flex flex-col gap-4">
